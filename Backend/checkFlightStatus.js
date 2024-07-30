@@ -19,6 +19,7 @@ const checkFlightStatus = async () => {
       const response = await axios.get(`https://api.flightstatus.com/flight/${flight.flightNumber}`);
       const newStatus = response.data.status;
       
+      
       if (newStatus !== flight.status) {
         flight.status = newStatus;
         flight.lastChecked = new Date();
