@@ -4,8 +4,8 @@ const MONGODB_URL = process.env.MONGODB_URL
 
 exports.connect = () => {
     mongoose.connect(MONGODB_URL, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+        // useNewUrlParser: true,
+        // useUnifiedTopology: true
     })
     .then(console.log("DB connection successfuly"))
     .catch((error) => {
